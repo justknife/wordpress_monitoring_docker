@@ -15,9 +15,17 @@ You must install python before use it
 
     3.  run docker-compose up -d (if you want to start it on daemon mode)
         Ready
+        
+
 go to blog.example.com to start work on wordpress
+
+
 go to grafana.example.com to start work on grafana monitoring
+
+
 go to prometheus.example.com to start work on prometheus
 
 CONFIGURING
+
+
 all config data is in .env file 
