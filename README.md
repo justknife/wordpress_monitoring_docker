@@ -12,11 +12,14 @@ You must install python before use it
    ## Using:
 
     1. cd wordpress_monitoring_docker
-
-    2. run  python python3 main.py 
+    
+    2. mv .env_example .env 
+    (or create your .env)
+    
+    3. run  python python3 main.py 
     wait until the script finishes
 
-    3.  run docker-compose up -d (if you want to start it on daemon mode)
+    4.  run docker-compose up -d (if you want to start it on daemon mode)
         Ready
         
 
