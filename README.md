@@ -17,13 +17,13 @@ You must install python before use it
         Ready
         
 
-go to blog.example.com to start work on wordpress
+go to https://blog.example.com to start work on wordpress
 
 
-go to grafana.example.com to start work on grafana monitoring
+go to htpps://grafana.example.com to start work on grafana monitoring
 
 
-go to prometheus.example.com to start work on prometheus
+go to https://prometheus.example.com to start work on prometheus
 
 CONFIGURING
 
