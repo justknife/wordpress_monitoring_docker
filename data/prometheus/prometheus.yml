@@ -1,0 +1,9 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  rule_files:
+scrape_configs:
+  - job_name: node-exporter-clients
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['localhost:9100']
