@@ -38,13 +38,15 @@ example: ```vim blog.example.com```
 3. Replace the value of the domain_name variable with the one you need
 all config data is in ```.env``` file
    Enviroment on env file 
-```MYSQL_ROOT_PASSWORD  
-   MYSQL_DATABASE
-   MYSQL_DB_USER
-   MYSQL_DB_PASSWORD```
+
+```   MYSQL_ROOT_PASSWORD```  
+```   MYSQL_DATABASE```
+```   MYSQL_DB_USER```
+```   MYSQL_DB_PASSWORD```
 
 
 
 
 
-Contact me via twitter: @fa1se_promises
+
+### Contact me via twitter: @fa1se_promises
