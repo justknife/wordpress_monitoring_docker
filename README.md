@@ -2,7 +2,7 @@ This repository provides an easy way to install and configure WordPress in conju
 
 
 
-clone repository: https://github.com/justknife/wordpress_monitoring_docker.git
+clone repository: ``` git clone https://github.com/justknife/wordpress_monitoring_docker.git ```
 
 You must install python before use it 
 
