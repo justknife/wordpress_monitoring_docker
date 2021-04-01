@@ -1,6 +1,6 @@
 This repository provides an easy way to install and configure WordPress in conjunction with a database and nginx.
 clone repository: https://github.com/justknife/wordpress_monitoring_docker.git
-You must install python before use it
+You must install python before use it \n
 Using:
     1. cd wordpress_monitoring_docker
     2. run <python3 main.py>
