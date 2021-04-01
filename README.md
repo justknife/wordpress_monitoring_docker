@@ -43,6 +43,11 @@ all config data is in ```.env``` file
 ```   MYSQL_DATABASE```
 ```   MYSQL_DB_USER```
 ```   MYSQL_DB_PASSWORD```
+4. From configure prometheus:
+   a. Go to directory prometheus
+   ```cd data/prometheus/```
+   b. Open ```prometheus.yml``` and add who you need
+   ``` vim primetheus.yml```
 
 
 
