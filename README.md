@@ -54,7 +54,9 @@ all config data is in ```.env``` file
 
 
 
+## License
 
+This project is licensed under the MIT open source license.
 
 
 ### Contact me via twitter: @fa1se_promises
