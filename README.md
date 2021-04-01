@@ -1,7 +1,9 @@
+<img src="icon.png" align="right" />
+
 # Wordpress-monitoring-docker
 This repository provides an easy way to install and configure WordPress in conjunction with a database and nginx.
 
-<img src="icon.png" align="right" />
+
 
 clone repository: ``` git clone https://github.com/justknife/wordpress_monitoring_docker.git ```
 
