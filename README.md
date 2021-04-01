@@ -33,24 +33,27 @@ go to https://prometheus.example.com to start work on prometheus
 
 ## Configuring
 
-to change the domain name of a resource:
-1. Go to the directory with the site configuration files
-  ```cd nginx/sites-available/ ```
-2. Open the required file with a text editor convenient for you.
-example: ```vim blog.example.com```
-3. Replace the value of the domain_name variable with the one you need
-all config data is in ```.env``` file
+### To change the domain name of a resource:
+   1. Go to the directory with the site configuration files
+      ```cd nginx/sites-available/ ```
+   2. Open the required file with a text editor convenient for you.
+      example: ```vim blog.example.com```
+### To configure manual enviroment of containers:
+
+   Replace the value of the domain_name variable with the one you need
+      all config data is in ```.env``` file
    Enviroment on env file 
 
 ```   MYSQL_ROOT_PASSWORD```  
 ```   MYSQL_DATABASE```
 ```   MYSQL_DB_USER```
 ```   MYSQL_DB_PASSWORD```
-4. From configure prometheus:
+### To configure prometheus:
    a. Go to directory prometheus
    ```cd data/prometheus/```
    b. Open ```prometheus.yml``` and add who you need
    ``` vim primetheus.yml```
+5. From configure grafana go to grafana.example.com
 
 
 
