@@ -1,3 +1,4 @@
+#Wordpress monitoring docker
 This repository provides an easy way to install and configure WordPress in conjunction with a database and nginx.
 
 
@@ -29,3 +30,9 @@ CONFIGURING
 
 
 all config data is in .env file 
+
+
+
+
+
+Contact me via twitter: @fa1se_promises
