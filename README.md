@@ -41,19 +41,35 @@ go to https://prometheus.example.com to start work on prometheus
 ### To configure manual enviroment of containers:
 
    Replace the value of the domain_name variable with the one you need
-      all config data is in ```.env``` file
-   Enviroment on env file 
+
+all config data is in ```.env``` file
+
+
+
+Enviroment on env file 
 
 ```   MYSQL_ROOT_PASSWORD```  
+
 ```   MYSQL_DATABASE```
+
 ```   MYSQL_DB_USER```
+
 ```   MYSQL_DB_PASSWORD```
+
+
+
 ### To configure prometheus:
+
    a. Go to directory prometheus
+   
    ```cd data/prometheus/```
+   
    b. Open ```prometheus.yml``` and add who you need
+   
    ``` vim primetheus.yml```
-5. From configure grafana go to grafana.example.com
+
+
+### From configure grafana go to grafana.example.com
 
 
 
@@ -62,4 +78,4 @@ go to https://prometheus.example.com to start work on prometheus
 This project is licensed under the MIT open source license.
 
 
-### Contact me via twitter: @fa1se_promises
+##### Contact me via twitter: @fa1se_promises
