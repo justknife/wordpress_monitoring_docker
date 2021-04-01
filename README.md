@@ -20,7 +20,7 @@ You must install python before use it
 go to https://blog.example.com to start work on wordpress
 
 
-go to htpps://grafana.example.com to start work on grafana monitoring
+go to https://grafana.example.com to start work on grafana monitoring
 
 
 go to https://prometheus.example.com to start work on prometheus
