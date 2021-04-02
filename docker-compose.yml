@@ -3,7 +3,8 @@ version: '3.9'
 
 services:
 
-  #### DATABASE CONTAINER####
+  ### DATABASE CONTAINER ###
+
   mysql:
     image: mariadb
     container_name: database_srv
@@ -18,28 +19,29 @@ services:
 
 
 
-  #### CONTANER WORDPRESS ####
+  ### CONTAINER WORDPRESS ###
+
   wordpress:
     image: wordpress:php7.4-fpm-alpine
-    container_name: php
+    container_name: wordpress
     volumes:
       - ./data/html:/var/www/html
     depends_on:
       - mysql
     environment:
-      WORDPRESS_TABLE_PREFIX: wp_
-      WORDPRESS_DB_HOST: mysql
-    -  MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-    -  WORDPRESS_DB_NAME=${DB_WORDPRESS}
-    -  WORDPRESS_DB_USER=${MYSQL_DB_USER}
-    -  WORDPRESS_DB_PASSWORD=${MYSQL_DB_PASSWORD}
+      -  WORDPRESS_DB_HOST=${WORDPRESS_DB_HOST}
+      -  WORDPRESS_TABLE_PREFIX=${WORDPRESS_TABLE_PREFIX}
+      -  MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      -  WORDPRESS_DB_NAME=${DB_WORDPRESS}
+      -  WORDPRESS_DB_USER=${MYSQL_DB_USER}
+      -  WORDPRESS_DB_PASSWORD=${MYSQL_DB_PASSWORD}
 
     links:
       - mysql
     restart: unless-stopped
 
 
-  #### NGINX CONTAINER ####
+  ### NGINX CONTAINER ###
   nginx:
     image: nginx:latest
     container_name: web_srv
@@ -55,10 +57,10 @@ services:
       - grafana
 
 
-  ### PHPMYADMIN CONTAINER####
+  ### PHPMYADMIN CONTAINER ###
   pma:
     image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin_srv
+    container_name: pma
     restart: always
     links:
       - mysql:mysql
@@ -66,10 +68,10 @@ services:
     -  MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
 
 
-  #### PROMETHEUS CONTAINER ####
+  ### PROMETHEUS CONTAINER ###
   prometheus:
     image: prom/prometheus:latest
-    container_name: prometheus_srv
+    container_name: prometheus
     volumes:
       - ./data/prometheus:/etc/prometheus
     command:
@@ -77,10 +79,10 @@ services:
     restart: unless-stopped
     ports:
       - 9090:9090
-  #### GRAFANA CONTAINER ####
+  ### GRAFANA CONTAINER ###
   grafana:
     image: grafana/grafana
-    container_name: grafana_srv
+    container_name: grafana
     depends_on:
       - prometheus
     ports:
@@ -90,7 +92,7 @@ services:
       - ./grafana/provisioning/:/etc/grafana/provisioning/
     restart: unless-stopped
 
-  #### NODE-EXPORTER CONTAINER #####
+  ### NODE-EXPORTER CONTAINER ###
   node-exporter:
     image: prom/node-exporter
     container_name: node_exporter

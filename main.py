@@ -123,9 +123,9 @@ def wordpress_docker():
                   'systemctl restart docker')
 
     # Download docker-compose file
-    os.system('sudo curl -L '
-              '"https://github.com/docker/compose/releases/download/1.28.6/docker-compose-$(uname -s)-$(uname -m)" '
-              '-o /usr/local/bin/docker-compose')
+    uname_s = os.system('uname -s')
+    uname_m = os.system('uname -m')
+    os.system(f'sudo curl -L "https://github.com/docker/compose/releases/download/1.28.6/docker-compose-{uname_s}-{uname_m}" -o /usr/local/bin/docker-compose')
 
     # Add permision to use docker-compose
     os.system('sudo chmod +x /usr/local/bin/docker-compose')
