@@ -132,6 +132,9 @@ def wordpress_docker():
 
     # Create symlimk to /usr/bin/ to use command docker-compose in shell
     os.system('sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose')
+    os.system('mkdir -p data/html')
+    os.system('mkdir -p data/prometheus')
+    os.system('mkdir -p grafana/provisioning')
 
 
 # If this file main run main function as wordpress_docker()
