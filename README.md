@@ -35,7 +35,7 @@ go to https://prometheus.example.com to start work on prometheus
 
 ### To change the domain name of a resource:
    1. Go to the directory with the site configuration files
-      ```cd nginx/sites-available/ ```
+      ```cd nginx/sites-enable/ ```
    2. Open the required file with a text editor convenient for you.
       example: ```vim blog.example.com```
 ### To configure manual enviroment of containers:
