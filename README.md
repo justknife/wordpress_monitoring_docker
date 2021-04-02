@@ -48,15 +48,17 @@ all config data is in ```.env``` file
 
 Enviroment on env file 
 
-```   MYSQL_ROOT_PASSWORD```  
+```   MYSQL_ROOT_PASSWORD  ```  
 
-```   MYSQL_DATABASE```
+```   MYSQL_DATABASE ```
 
-```   MYSQL_DB_USER```
+```   MYSQL_DB_USER  ```
 
-```   MYSQL_DB_PASSWORD```
+```   MYSQL_DB_PASSWORD ```
 
+```   WORDPRESS_DB_HOST ```
 
+```   WORDPRESS_TABLE_PREFIX ```
 
 ### To configure prometheus:
 
