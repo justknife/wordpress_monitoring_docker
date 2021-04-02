@@ -43,12 +43,15 @@ services:
 
   ### NGINX CONTAINER ###
   nginx:
+    #build: ./
     image: nginx:latest
     container_name: web_srv
     restart: unless-stopped
     volumes:
-      - ./nginx:/etc/nginx/conf.d
+      - ./nginx/sites-enabled:/etc/nginx/sites-enabled
       - ./data/html:/var/www/html
+  #  command:
+  #   - nginx -g daemon off -c /etc/nginx/conf.d/nginx.conf
     ports:
       - 8080:80
     links:
@@ -73,7 +76,7 @@ services:
     image: prom/prometheus:latest
     container_name: prometheus
     volumes:
-      - ./data/prometheus:/etc/prometheus
+      - ./data/prometheus:/etc/prometheus/
     command:
       - --config.file=/etc/prometheus/prometheus.yml
     restart: unless-stopped
