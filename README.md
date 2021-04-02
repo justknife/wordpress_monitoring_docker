@@ -16,7 +16,7 @@ You must install python before use it
     2. mv .env_example .env 
     (or create your .env)
     
-    3. run  python python3 main.py 
+    3. run  python main.py 
     wait until the script finishes
 
     4.  run docker-compose up -d (if you want to start it on daemon mode)
