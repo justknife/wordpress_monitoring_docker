@@ -16,7 +16,7 @@ You must install python before use it
     2. mv .env_example .env 
     (or create your .env)
     
-    3. run  python python3 main.py 
+    3. run  python main.py 
     wait until the script finishes
 
     4.  run docker-compose up -d (if you want to start it on daemon mode)
@@ -35,7 +35,7 @@ go to https://prometheus.example.com to start work on prometheus
 
 ### To change the domain name of a resource:
    1. Go to the directory with the site configuration files
-      ```cd nginx/sites-available/ ```
+      ```cd nginx/sites-enable/ ```
    2. Open the required file with a text editor convenient for you.
       example: ```vim blog.example.com```
 ### To configure manual enviroment of containers:
