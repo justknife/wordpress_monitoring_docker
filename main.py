@@ -66,7 +66,7 @@ def wordpress_docker():
 
     if checkOS() == 'Arch Linux':
 
-        os.system(f'{key_pm} {key_pm_install} docker')
+        os.system(f'sudo {key_pm} {key_pm_install} docker')
 
     else:
 
