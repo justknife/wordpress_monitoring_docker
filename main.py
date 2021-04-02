@@ -1,6 +1,6 @@
 import os
 import re
-
+import subprocess
 
 def checkOS():
     """ This finction need from checked OS type and use specific key package manager"""
@@ -123,9 +123,17 @@ def wordpress_docker():
                   'systemctl restart docker')
 
     # Download docker-compose file
-    uname_s = os.system('uname -s')
-    uname_m = os.system('uname -m')
-    os.system(f'sudo curl -L "https://github.com/docker/compose/releases/download/1.28.6/docker-compose-{uname_s}-{uname_m}" -o /usr/local/bin/docker-compose')
+    uname_s = subprocess.Popen(f"uname -s", shell=True, stdout=subprocess.PIPE)
+    uname_s = uname_s.stdout.read()
+    uname_s = uname_s[:-1]
+    uname_s = uname_s.decode('utf-8')
+    uname_m = subprocess.Popen(f"uname -m", shell=True, stdout=subprocess.PIPE)
+    uname_m = uname_m.stdout.read()
+    uname_m = uname_m[:-1]
+    uname_m = uname_m.decode('utf-8')
+    os.system(f'sudo curl -L "https://github.com/docker/compose/releases/download/1.28.6/docker-compose-{uname_s}-'
+              f'{uname_m}" '
+              f'-o /usr/local/bin/docker-compose')
 
     # Add permision to use docker-compose
     os.system('sudo chmod +x /usr/local/bin/docker-compose')
